@@ -1,0 +1,42 @@
+[
+    {
+      "First Name": "Marjorie",
+      "Last Name": "Whelan",
+      "Major": "Theatre",
+      "Interest 1": "Reading",
+      "Interest 2": "Microbiology",
+      "Picture": ""
+    },
+    {
+      "First Name": "Eric",
+      "Last Name": "Hardison",
+      "Major": "Computer Science",
+      "Interest 1": "Reading",
+      "Interest 2": "Privacy",
+      "Picture": ""
+    },
+    {
+      "First Name": "Aliyah",
+      "Last Name": "Naylor",
+      "Major": "Geography",
+      "Interest 1": "Maps",
+      "Interest 2": "Music",
+      "Picture": ""
+    },
+    {
+      "First Name": "Roy",
+      "Last Name": "Ronald",
+      "Major": "Theatre",
+      "Interest 1": "Dogs",
+      "Interest 2": "Soccer",
+      "Picture": ""
+    },
+    {
+      "First Name": "Rico",
+      "Last Name": "Vasquez",
+      "Major": "History",
+      "Interest 1": "Leadership",
+      "Interest 2": "Frogs",
+      "Picture": ""
+    }
+   ]

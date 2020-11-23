@@ -1,7 +1,8 @@
 import React from "react";
 import SearchSelector from "./SearchSelector";
 import SearchSlider from "./SearchSlider";
-import { Box, Paper } from "@material-ui/core";
+import SearchButton from "./SearchButton"
+import {Box} from "@material-ui/core";
 
 const INTERESTS = ["Class #1", "Class #2", "Basketball", "Gaming", "Dogs"]
 
@@ -10,10 +11,11 @@ export default function Preferences() {
         <div className="Preferences">
             <Box p={2}>
             <SearchSelector />
-            <p>"Who shares my interests in...</p>
+            <p>Who shares my interests in...</p>
             {INTERESTS.map((fieldName) =>(
                 <SearchSlider fieldName = {fieldName} />
             ))}
+            <SearchButton />
             </Box>
         </div>
     )
