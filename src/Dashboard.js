@@ -7,6 +7,7 @@ import SuggestedMatches from './SuggestedMatches';
 import { useLayoutEffect } from 'react';
 import Notifications from './Notifications';
 import HighlightedMatch from './HighlightedMatch';
+import Profile from './Profile';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,7 +75,10 @@ export default function Dashboard(props) {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><h2>Profile</h2></Paper>
+          <Paper className={classes.paper}>
+              <h2>My Profile</h2>
+              <Profile />
+              </Paper>
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
@@ -95,7 +99,7 @@ export default function Dashboard(props) {
             </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.featured}><h2>Profile</h2>
+          <Paper className={classes.featured}><h2>Johnny Bravo</h2>
           <HighlightedMatch />
            </Paper>
         </Grid>
