@@ -6,6 +6,7 @@ import Preferences from './Preferences';
 import SuggestedMatches from './SuggestedMatches';
 import { useLayoutEffect } from 'react';
 import Notifications from './Notifications';
+import HighlightedMatch from './HighlightedMatch';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -75,7 +76,9 @@ export default function Dashboard(props) {
             </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><h2>Profile</h2></Paper>
+          <Paper className={classes.paper}><h2>Profile</h2>
+          <HighlightedMatch />
+           </Paper>
         </Grid>
       </Grid>
     );
