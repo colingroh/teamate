@@ -8,11 +8,15 @@ import { useLayoutEffect } from 'react';
 import Notifications from './Notifications';
 import HighlightedMatch from './HighlightedMatch';
 import Profile from './Profile';
+import HiddenMatch from './HiddenMatch';
+import { store, useGlobalState } from 'state-pool';
+import SuggestedTeaParties from './SuggestedTeaParties';
+import HighlightedParty from './HighlightedParty';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: 30,
+    padding: 50,
     backgroundColor: '#D3EED7',
   },
   paper: {
@@ -53,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
   },
 }));
-
 
 export default function Dashboard(props) {
     function useLockBodyScroll() {
@@ -99,8 +102,9 @@ export default function Dashboard(props) {
             </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.featured}><h2>Johnny Bravo</h2>
-          <HighlightedMatch />
+          <Paper className={classes.featured}>
+              <HighlightedParty />
+              {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
            </Paper>
         </Grid>
       </Grid>
@@ -114,7 +118,8 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={6} md={3}>
-          <Paper className={classes.matches}><SuggestedMatches/></Paper>
+          {/* <Paper className={classes.matches}><SuggestedMatches/></Paper> */}
+          <Paper className={classes.matches}><SuggestedTeaParties/></Paper>
         </Grid>
         <Grid item xs={6} md={6}>
           <FormRow2 />

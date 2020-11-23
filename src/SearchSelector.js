@@ -20,10 +20,12 @@ export default function SearchSelector() {
   const handleChange = (event) => {
     setSearchPref(event.target.value);
   };
+
+
   
 return(
     <div className= "SearchSelector">
-<FormControl className={classes.formControl}>
+    <FormControl className={classes.formControl}>
         <InputLabel id="select-search-type">I'm looking for a...</InputLabel>
         <Select
           labelId="select-search-type-label"

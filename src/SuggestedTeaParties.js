@@ -1,5 +1,5 @@
 import React from 'react';
-import SuggestedUser from "./SuggestedUser";
+import SuggestedParty from "./SuggestedParty";
 
 const USERS = [
     {
@@ -60,13 +60,13 @@ const USERS = [
     }
    ]
 
-export default function SuggestedMatches(){
+export default function SuggestedTeaParties(){
 
   return(
       <div>
-          <h2 align= 'left'>Suggested Matches</h2>
+          <h2 align= 'left'>Suggested TeaParties</h2>
           {USERS.map((user) =>(
-                  <SuggestedUser user={user} />
+                  <SuggestedParty user={user} />
               ))}
       </div>
   )

@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
-import johnny from './profile_pic.png';
+import doug from './doug.jpeg';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
@@ -44,23 +44,13 @@ export default function HighlightedMatch() {
         <Grid container spacing={2} alignItems="top" wrap="nowrap">
           <Grid item md={6}>
             <Box bgcolor="primary.main" clone>
-              <Avatar alt= 'profile-picture' src={johnny} className={classes.picture} />
+              <Avatar alt= 'profile-picture' src={doug} className={classes.picture} />
             </Box>
           </Grid>
           <Grid item>
             <Typography variant='h6'><strong>Major:</strong> Computer Science</Typography>
-            <Typography variant='h6'><strong>Interests:</strong></Typography>
-            <ul>
-              <li>
-                Basketball
-              </li>
-              <li>
-                Gaming
-              </li>
-              <li>
-                Eggs
-              </li>
-            </ul>
+            <Typography variant='h6'><strong>Interests:</strong> Basketball, Gaming, Biology</Typography>
+            <Typography variant='h6'><strong>Currently located:</strong> On Campus</Typography>
           </Grid>
         </Grid>
       </Paper>
