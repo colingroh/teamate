@@ -109,7 +109,7 @@ export default function SimpleCard(prop) {
                 </Grid>
             </CardContent>
                 <CardActions className={classes.button}>
-                    <Button onClick={alert("Look to the right now! Something *just* appeared!")}>Select</Button >
+                    <Button>Select</Button >
                 </CardActions>
         </Card>
     );
