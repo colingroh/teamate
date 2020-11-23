@@ -1,11 +1,10 @@
 import React from 'react';
-import {Box} from "@material-ui/core";
 import SuggestedUser from "./SuggestedUser";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   nowrap: {
-    overflow: 'scroll',
+    overflow:'scroll',
   }
 }));
 
@@ -49,7 +48,23 @@ const USERS = [
       int1: "Leadership",
       int2: "Frogs",
       pic: ""
-    }
+    },
+    {
+      first: "Rico",
+      last: "Vasquez",
+      major: "History",
+      int1: "Leadership",
+      int2: "Frogs",
+      pic: ""
+    },
+    {
+      first: "Rico",
+      last: "Vasquez",
+      major: "History",
+      int1: "Leadership",
+      int2: "Frogs",
+      pic: ""
+    },
    ]
 
 export default function SuggestedMatches(){
