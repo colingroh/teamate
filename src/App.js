@@ -8,12 +8,18 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#6E8773',
+      main: '#103D3A',
     },
     secondary: {
-      main: '#2D9F99',
+      main: '#103D3A',
+    },
+    background: {
+      paper: '#9AACA0',
     }
   },
+  typography: {
+    fontFamily: 'Heiti SC',
+  }
 });
 
 function App() {
@@ -21,8 +27,12 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <div className="App">
+<<<<<<< HEAD
             <Dashboard />
             <Login />
+=======
+          <Dashboard />
+>>>>>>> b4d31cad66a3ca726b32cbff370cc8b501b3604e
       </div>
     </MuiThemeProvider>
   );
