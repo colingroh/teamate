@@ -3,11 +3,7 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Preferences from './Preferences'
-<<<<<<< HEAD
-import SuggestedMatches from './SuggestedMatches';
-=======
 import SuggestedMatches from './SuggestedMatches'
->>>>>>> 0362761194efbecac947f02834c1649ac05d1d0e
 
 const useStyles = makeStyles((theme) => ({
   root: {
