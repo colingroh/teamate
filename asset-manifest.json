@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/teamate-individual/static/css/main.7d180cbf.chunk.css",
-    "main.js": "/teamate-individual/static/js/main.4f1fab13.chunk.js",
-    "main.js.map": "/teamate-individual/static/js/main.4f1fab13.chunk.js.map",
-    "runtime-main.js": "/teamate-individual/static/js/runtime-main.7e1bd870.js",
-    "runtime-main.js.map": "/teamate-individual/static/js/runtime-main.7e1bd870.js.map",
-    "static/js/2.e6606da1.chunk.js": "/teamate-individual/static/js/2.e6606da1.chunk.js",
-    "static/js/2.e6606da1.chunk.js.map": "/teamate-individual/static/js/2.e6606da1.chunk.js.map",
-    "index.html": "/teamate-individual/index.html",
-    "static/css/main.7d180cbf.chunk.css.map": "/teamate-individual/static/css/main.7d180cbf.chunk.css.map",
-    "static/js/2.e6606da1.chunk.js.LICENSE.txt": "/teamate-individual/static/js/2.e6606da1.chunk.js.LICENSE.txt",
-    "static/media/Zuko.7a5fbf29.png": "/teamate-individual/static/media/Zuko.7a5fbf29.png",
-    "static/media/danny.74f5cc58.jpg": "/teamate-individual/static/media/danny.74f5cc58.jpg",
-    "static/media/dora.fc40f56f.jpg": "/teamate-individual/static/media/dora.fc40f56f.jpg",
-    "static/media/doug.16b8b891.jpeg": "/teamate-individual/static/media/doug.16b8b891.jpeg",
-    "static/media/profile_pic.1a9656fb.png": "/teamate-individual/static/media/profile_pic.1a9656fb.png"
+    "main.css": "/teamate/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/teamate/static/js/main.a7f9cc46.chunk.js",
+    "main.js.map": "/teamate/static/js/main.a7f9cc46.chunk.js.map",
+    "runtime-main.js": "/teamate/static/js/runtime-main.b1b2a35c.js",
+    "runtime-main.js.map": "/teamate/static/js/runtime-main.b1b2a35c.js.map",
+    "static/js/2.f6f19871.chunk.js": "/teamate/static/js/2.f6f19871.chunk.js",
+    "static/js/2.f6f19871.chunk.js.map": "/teamate/static/js/2.f6f19871.chunk.js.map",
+    "index.html": "/teamate/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/teamate/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.f6f19871.chunk.js.LICENSE.txt": "/teamate/static/js/2.f6f19871.chunk.js.LICENSE.txt",
+    "static/media/Zuko.7a5fbf29.png": "/teamate/static/media/Zuko.7a5fbf29.png",
+    "static/media/danny.74f5cc58.jpg": "/teamate/static/media/danny.74f5cc58.jpg",
+    "static/media/dora.fc40f56f.jpg": "/teamate/static/media/dora.fc40f56f.jpg",
+    "static/media/doug.16b8b891.jpeg": "/teamate/static/media/doug.16b8b891.jpeg",
+    "static/media/profile_pic.1a9656fb.png": "/teamate/static/media/profile_pic.1a9656fb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e1bd870.js",
-    "static/js/2.e6606da1.chunk.js",
-    "static/css/main.7d180cbf.chunk.css",
-    "static/js/main.4f1fab13.chunk.js"
+    "static/js/runtime-main.b1b2a35c.js",
+    "static/js/2.f6f19871.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.a7f9cc46.chunk.js"
   ]
 }
