@@ -102,7 +102,7 @@ export default function Dashboard(props) {
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.featured}>
-              <HighlightedParty />
+              <HighlightedMatch />
               {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
            </Paper>
         </Grid>
@@ -117,8 +117,8 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={6} md={3}>
-          {/* <Paper className={classes.matches}><SuggestedMatches/></Paper> */}
-          <Paper className={classes.matches}><SuggestedTeaParties/></Paper>
+          <Paper className={classes.matches}><SuggestedMatches/></Paper>
+          {/* <Paper className={classes.matches}><SuggestedTeaParties/></Paper> */}
         </Grid>
         <Grid item xs={6} md={6}>
           <FormRow2 />
