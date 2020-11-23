@@ -1,31 +1,54 @@
 import React from 'react';
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Preferences from './Preferences';
 import SuggestedMatches from './SuggestedMatches';
+import { useLayoutEffect } from 'react';
 import Notifications from './Notifications';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: 20,
+    padding: 30,
     backgroundColor: '#D3EED7',
   },
   paper: {
-    padding: theme.spacing(2),
+    margin: theme.spacing(1),
     textAlign: 'left',
     color: theme.palette.primary.main,
     height: '100%',
-    paddingBottom: 0,
-    overflow: 'auto'
+    overflow: 'auto',
+    paddingLeft: 20,
+    paddingRight: 20,
   },
-  
+  matches: {
+    margin: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.primary.main,
+    overflow: 'auto',
+    height: '90%',
+    paddingLeft: 20,
+    paddingRight: 20,
+  }
 }));
 
 
 export default function Dashboard(props) {
-  const classes = useStyles();
+    function useLockBodyScroll() {
+        useLayoutEffect(() => {
+         // Get original body overflow
+         const originalStyle = window.getComputedStyle(document.body).overflow;  
+         // Prevent scrolling on mount
+         document.body.style.overflow = 'hidden';
+         // Re-enable scrolling when component unmounts
+         return () => document.body.style.overflow = originalStyle;
+         }, []); // Empty array ensures effect is only run on mount and unmount
+      }
+
+    const classes = useStyles();
+
+    useLockBodyScroll();
 
   function FormRow1() {
     return (
@@ -65,7 +88,7 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={6} md={3}>
-          <Paper className={classes.paper}><SuggestedMatches/></Paper>
+          <Paper className={classes.matches}><SuggestedMatches/></Paper>
         </Grid>
         <Grid item xs={6} md={6}>
           <FormRow2 />
