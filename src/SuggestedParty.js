@@ -51,9 +51,9 @@ const useStyles = makeStyles((theme) => ({
 export default function SimpleCard(prop) {
     const classes = useStyles();
 
-    let handleClick = (event) => {
-        {console.log('beepboop')}
-    } 
+    // let handleClick = (event) => {
+    //     {console.log('beepboop')}
+    // } 
 
     return (
         <Card className={classes.root} elevation={8}>
