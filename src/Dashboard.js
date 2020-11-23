@@ -1,29 +1,32 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Preferences from './Preferences'
+import SuggestedMatches from './SuggestedMatches'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: 10
+    padding: 20,
+    backgroundColor: '#D3EED7',
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'left',
-    color: theme.palette.text.secondary,
+    color: theme.palette.primary.main,
     height: '100%',
     paddingBottom: 0,
-    marginBottom: 50
-  }
+    overflow: 'auto'
+  },
+  
 }));
 
 
-export default function Dashboard() {
+export default function Dashboard(props) {
   const classes = useStyles();
 
-  function FormRow() {
+  function FormRow1() {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
@@ -31,9 +34,22 @@ export default function Dashboard() {
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-              <h2>I'm looking for a...</h2>
+              <h2>Preferences</h2>
               <Preferences />
           </Paper>
+        </Grid>
+      </Grid>
+    );
+  }
+
+  function FormRow2() {
+    return (
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+            <Paper className={classes.paper}><h2>Title</h2></Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}><h2>Title</h2></Paper>
         </Grid>
       </Grid>
     );
@@ -43,13 +59,13 @@ export default function Dashboard() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={3}>
-          <FormRow />
+          <FormRow1 />
         </Grid>
         <Grid item xs={6} md={3}>
-          <Paper className={classes.paper}><h2>Suggested Matches</h2></Paper>
+          <Paper className={classes.paper}><SuggestedMatches/></Paper>
         </Grid>
         <Grid item xs={6} md={6}>
-          <Paper className={classes.paper}><h2>Title</h2></Paper>
+          <FormRow2 />
         </Grid>
       </Grid>
       <Grid container item xs={12} spacing={3}>
