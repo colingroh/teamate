@@ -9,7 +9,6 @@ import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import selectedUser from './Dashboard';
-import { store, useGlobalState } from 'state-pool';
 import Hidden from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({

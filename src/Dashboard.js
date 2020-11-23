@@ -9,7 +9,6 @@ import Notifications from './Notifications';
 import HighlightedMatch from './HighlightedMatch';
 import Profile from './Profile';
 import HiddenMatch from './HiddenMatch';
-import { store, useGlobalState } from 'state-pool';
 import SuggestedTeaParties from './SuggestedTeaParties';
 import HighlightedParty from './HighlightedParty';
 
