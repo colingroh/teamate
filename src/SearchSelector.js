@@ -4,7 +4,6 @@ import { makeStyles, InputLabel, MenuItem, FormControl, Select } from '@material
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
     minWidth: '100%',
   },
   selectEmpty: {

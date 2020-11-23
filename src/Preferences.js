@@ -9,9 +9,9 @@ const INTERESTS = ["Class #1", "Class #2", "Basketball", "Gaming", "Dogs"]
 export default function Preferences() {
     return(
         <div className="Preferences">
-            <Box p={2}>
+            <Box px={1}>
             <SearchSelector />
-            <p>Who shares my interests in...</p>
+            <p>Who shares my interest in...</p>
             {INTERESTS.map((fieldName) =>(
                 <SearchSlider fieldName = {fieldName} />
             ))}

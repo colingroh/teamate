@@ -25,6 +25,7 @@ export default function SearchSlider(props) {
     <div className="SearchSlider">
       <Typography align='left'id={labelId}>{props.fieldName} </Typography>
       <Slider
+        color='secondary'
         defaultValue={5}
         aria-labelledby={labelId}
         step={1}
