@@ -2,12 +2,9 @@ import React from 'react';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Preferences from './Preferences'
-<<<<<<< HEAD
+import Preferences from './Preferences';
 import SuggestedMatches from './SuggestedMatches';
-=======
-import SuggestedMatches from './SuggestedMatches'
->>>>>>> 0362761194efbecac947f02834c1649ac05d1d0e
+import Notifications from './Notifications';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,10 +47,12 @@ export default function Dashboard(props) {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <Paper className={classes.paper}><h2>Title</h2></Paper>
+            <Paper className={classes.paper}><h2>Notifications</h2>
+            <Notifications />
+            </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><h2>Title</h2></Paper>
+          <Paper className={classes.paper}><h2>Profile</h2></Paper>
         </Grid>
       </Grid>
     );
