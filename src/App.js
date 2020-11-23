@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Dashboard from './Dashboard'
+import Login from './Login'
+
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
@@ -20,6 +22,7 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <div className="App">
             <Dashboard />
+            <Login />
       </div>
     </MuiThemeProvider>
   );
