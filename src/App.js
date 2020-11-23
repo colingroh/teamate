@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import Preferences from './Preferences';
-import SuggestedMatches from './SuggestedMatches'
+import Dashboard from './Dashboard'
+
 function App() {
   return (
     <div className="App">
-      {/* <Preferences /> */}
-      <SuggestedMatches />
+        <Dashboard />
     </div>
   );
 }
