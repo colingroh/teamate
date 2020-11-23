@@ -28,10 +28,29 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     color: theme.palette.primary.main,
     overflow: 'auto',
-    height: '90%',
+    maxHeight: '95vh',
     paddingLeft: 20,
     paddingRight: 20,
-  }
+  },
+  notif: {
+    margin: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.primary.main,
+    overflow: 'auto',
+    paddingLeft: 20,
+    paddingRight: 20,
+    maxHeight: '25vh'
+  },
+  featured: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    marginTop: -8,
+    textAlign: 'left',
+    color: theme.palette.primary.main,
+    overflow: 'auto',
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
 }));
 
 
@@ -71,12 +90,12 @@ export default function Dashboard(props) {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <Paper className={classes.paper}><h2>Notifications</h2>
+            <Paper className={classes.notif}><h2>Notifications</h2>
             <Notifications />
             </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}><h2>Profile</h2>
+          <Paper className={classes.featured}><h2>Profile</h2>
           <HighlightedMatch />
            </Paper>
         </Grid>
