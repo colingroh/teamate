@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import johnny from './profile_pic.png';
-import { store, useGlobalState } from 'state-pool';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -39,15 +38,15 @@ const useStyles = makeStyles((theme) => ({
 export default function SimpleCard(prop) {
     const classes = useStyles();
 
-    const [isHighlighted, updateHighlighted] = useGlobalState("isHighlighted");
+    // const [isHighlighted, updateHighlighted] = useGlobalState("isHighlighted");
     
-    let handleClick = (event) => {
-        updateHighlighted(changeHighlight)
-    } 
+    // let handleClick = (event) => {
+    //     updateHighlighted(changeHighlight)
+    // } 
 
-    function changeHighlight() { 
-        return !isHighlighted
-    }
+    // function changeHighlight() { 
+    //     return !isHighlighted
+    // }
 
     return (
         <Card className={classes.root} elevation={8}>
@@ -82,7 +81,7 @@ export default function SimpleCard(prop) {
             </CardContent>
             
             <CardActions className={classes.button}>
-                <Button onClick={handleClick}>Select</Button >
+                <Button onClick={alert("Look to the right now! Something *just* appeared!")}>Select</Button >
             </CardActions>
         </Card>
     );

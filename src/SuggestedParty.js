@@ -11,7 +11,6 @@ import johnny from './profile_pic.png';
 import zuko from './Zuko.png';
 import danny from './danny.jpg';
 import dora from './dora.jpg';
-import { store, useGlobalState } from 'state-pool';
 import AvatarGroup from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles((theme) => ({
@@ -110,7 +109,7 @@ export default function SimpleCard(prop) {
                 </Grid>
             </CardContent>
                 <CardActions className={classes.button}>
-                    <Button onClick={handleClick}>Select</Button >
+                    <Button onClick={alert("Look to the right now! Something *just* appeared!")}>Select</Button >
                 </CardActions>
         </Card>
     );
