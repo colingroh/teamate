@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Preferences from './Preferences'
+import SuggestedMatches from './SuggestedMatches';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +47,7 @@ export default function Dashboard() {
           <FormRow />
         </Grid>
         <Grid item xs={6} md={3}>
-          <Paper className={classes.paper}><h2>Suggested Matches</h2></Paper>
+          <Paper className={classes.paper}><SuggestedMatches/></Paper>
         </Grid>
         <Grid item xs={6} md={6}>
           <Paper className={classes.paper}><h2>Title</h2></Paper>
