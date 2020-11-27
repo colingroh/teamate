@@ -102,10 +102,10 @@ export default function Dashboard(props) {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.featured}>
-            <HighlightedMatch />
-            {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
-          </Paper>
+          {/* <Paper className={classes.featured}> */}
+          <HighlightedMatch />
+          {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
+          {/* </Paper> */}
         </Grid>
       </Grid>
     );
@@ -113,17 +113,19 @@ export default function Dashboard(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={3}>
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
           <FormRow1 />
         </Grid>
-        <Grid item xs={6} md={3}>
+        <Grid item xs={5}>
+          {/* <Paper className={classes.matches}> */}
+          {/* <SuggestedMatches /> */}
+          {/* </Paper> */}
           <Paper className={classes.matches}>
-            <SuggestedMatches />
+            <SuggestedTeaParties />
           </Paper>
-          {/* <Paper className={classes.matches}><SuggestedTeaParties/></Paper> */}
         </Grid>
-        <Grid item xs={6} md={6}>
+        <Grid item xs={4}>
           <FormRow2 />
         </Grid>
       </Grid>

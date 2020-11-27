@@ -15,22 +15,17 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   name: {
-    height: 24,
     textAlign: "left",
   },
   major: {
-    height: 18,
-    marginBottom: 30,
-  },
-  pos: {
-    marginBottom: 12,
+    marginBottom: 18,
   },
   button: {
     float: "right",
   },
   large: {
-    width: theme.spacing(12),
-    height: theme.spacing(12),
+    width: "100%",
+    height: "auto",
   },
 }));
 
@@ -58,7 +53,9 @@ export default function SimpleCard(prop) {
               color="textPrimary"
               component="h2"
             >
-              {prop.user.first} {prop.user.last}
+              <strong>
+                {prop.user.first} {prop.user.last}
+              </strong>
             </Typography>
           </Grid>
           <Grid item xs={4}>
