@@ -1,31 +1,32 @@
-import React from 'react';
-import { makeStyles, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core/';
-
+import React from "react";
+import {
+  makeStyles,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+} from "@material-ui/core/";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    minWidth: '100%',
+    minWidth: "100%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
 }));
 
-
-
 export default function SearchSelector() {
   const classes = useStyles();
-  const [searchPref, setSearchPref] = React.useState('');
+  const [searchPref, setSearchPref] = React.useState("");
 
   const handleChange = (event) => {
     setSearchPref(event.target.value);
   };
 
-
-  
-return(
-    <div className= "SearchSelector">
-    <FormControl className={classes.formControl}>
+  return (
+    <div className="SearchSelector">
+      <FormControl className={classes.formControl}>
         <InputLabel id="select-search-type">I'm looking for a...</InputLabel>
         <Select
           labelId="select-search-type-label"
@@ -38,6 +39,6 @@ return(
           <MenuItem value={"TeaParty"}>TeaParty</MenuItem>
         </Select>
       </FormControl>
-      </div>
-);
+    </div>
+  );
 }
