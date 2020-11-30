@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
   },
   picture: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
+    width: "100%",
+    height: "auto",
   },
   yes: {
     backgroundColor: "#5cdb5c",

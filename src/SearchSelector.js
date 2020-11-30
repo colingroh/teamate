@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   makeStyles,
   InputLabel,
@@ -6,6 +6,7 @@ import {
   FormControl,
   Select,
 } from "@material-ui/core/";
+import { TeaContext } from "./TeaContext";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -17,11 +18,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SearchSelector() {
-  const classes = useStyles();
-  const [searchPref, setSearchPref] = React.useState("");
+  const context = useContext(TeaContext);
+  console.log("rendering", context.searchType);
 
+  const classes = useStyles();
   const handleChange = (event) => {
-    setSearchPref(event.target.value);
+    console.log("before", context.searchType);
+    context.setSearchType(event.target.value);
+    console.log("after", context.searchType);
   };
 
   return (
@@ -31,7 +35,7 @@ export default function SearchSelector() {
         <Select
           labelId="select-search-type-label"
           id="select-search-type"
-          value={searchPref}
+          value={context.searchType}
           onChange={handleChange}
         >
           {/* <MenuItem value=""></MenuItem> */}

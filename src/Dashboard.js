@@ -77,7 +77,7 @@ export default function Dashboard(props) {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
+          <Paper px={2} className={classes.paper}>
             <h2>My Profile</h2>
             <Profile />
           </Paper>

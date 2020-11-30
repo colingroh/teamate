@@ -10,12 +10,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     padding: 30,
     backgroundColor: "#D3EED7",
   },
   paper: {
-    margin: theme.spacing(1),
     textAlign: "left",
     color: theme.palette.primary.main,
     height: "100%",
@@ -24,26 +22,26 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
   },
   picture: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
+    width: "100%",
+    height: "auto",
   },
   name: {
     paddingBottom: 20,
   },
 }));
 
-export default function HighlightedMatch() {
+export default function Profile() {
   const classes = useStyles();
   return (
-    <Box clone pt={0} pr={1} pb={0} pl={2}>
+    <Box clone pt={0} pr={0} pb={0} pl={0}>
       <Paper elevation={0}>
         <Grid item xs={12}>
           <Typography variant="h5" align="left" className={classes.name}>
             <strong>Doug Dimmadome</strong>
           </Typography>
         </Grid>
-        <Grid container spacing={2} alignItems="top" wrap="nowrap">
-          <Grid item md={6}>
+        <Grid container spacing={2} xs={12}>
+          <Grid item xs={4}>
             <Box bgcolor="primary.main" clone>
               <Avatar
                 alt="profile-picture"
@@ -52,17 +50,21 @@ export default function HighlightedMatch() {
               />
             </Box>
           </Grid>
-          <Grid item>
-            <Typography variant="h6">
+          <Grid item xs={8}>
+            <Typography variant="body1">
               <strong>Major:</strong> Computer Science
             </Typography>
-            <Typography variant="h6">
+
+            <Typography variant="body1">
               <strong>Interests:</strong> Basketball, Gaming, Biology
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="body1">
               <strong>Currently located:</strong> On Campus
             </Typography>
           </Grid>
+        </Grid>
+        <Grid container spacing={2} alignItems="left" wrap="nowrap">
+          <Button onClick={() => alert("Profile Edited!")}>Edit Profile</Button>
         </Grid>
       </Paper>
     </Box>

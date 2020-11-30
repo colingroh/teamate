@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Dashboard from "./Dashboard";
-
+import { TeaProvider } from "./TeaContext";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
@@ -24,9 +24,11 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <div className="App">
-        <Dashboard />
-      </div>
+      <TeaProvider>
+        <div className="App">
+          <Dashboard />
+        </div>
+      </TeaProvider>
     </MuiThemeProvider>
   );
 }
