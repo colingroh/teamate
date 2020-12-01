@@ -121,14 +121,15 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={5}>
-          {context.searchType == 'TeaMate' ?
+          {context.searchType == 'TeaParty' ?
             <Paper className={classes.matches}>
-              <SuggestedMatches />
+              <SuggestedTeaParties />
             </Paper>
             :
             <Paper className={classes.matches}>
-              <SuggestedTeaParties />
-            </Paper>}
+              <SuggestedMatches />
+            </Paper>
+          }
 
         </Grid>
         <Grid item xs={4}>
