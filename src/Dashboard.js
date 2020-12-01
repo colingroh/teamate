@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -11,6 +11,8 @@ import Profile from "./Profile";
 import HiddenMatch from "./HiddenMatch";
 import SuggestedTeaParties from "./SuggestedTeaParties";
 import HighlightedParty from "./HighlightedParty";
+import { TeaContext } from "./TeaContext";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard(props) {
+  const context = useContext(TeaContext);
   // function useLockBodyScroll() {
   //     useLayoutEffect(() => {
   //      // Get original body overflow
@@ -118,12 +121,15 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={5}>
-          {/* <Paper className={classes.matches}> */}
-          {/* <SuggestedMatches /> */}
-          {/* </Paper> */}
-          <Paper className={classes.matches}>
-            <SuggestedTeaParties />
-          </Paper>
+          {context.searchType == 'TeaMate' ?
+            <Paper className={classes.matches}>
+              <SuggestedMatches />
+            </Paper>
+            :
+            <Paper className={classes.matches}>
+              <SuggestedTeaParties />
+            </Paper>}
+
         </Grid>
         <Grid item xs={4}>
           <FormRow2 />

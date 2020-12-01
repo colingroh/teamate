@@ -1,12 +1,12 @@
-import React from "react";
+import { createContext, useState } from "react";
 
-export const TeaContext = React.createContext({});
+export const TeaContext = createContext({});
 
 //TeaMate or Party, submittedSearch, selectedCardID,
 export function TeaProvider({ children }) {
-  const [searchType, setSearchType] = React.useState("");
-  const [submittedSearch, setSubmittedSearch] = React.useState("");
-  const [selectedCardID, setSelectedCardID] = React.useState(null);
+  const [searchType, setSearchType] = useState("");
+  const [submittedSearch, setSubmittedSearch] = useState("");
+  const [selectedCardID, setSelectedCardID] = useState(null);
 
   return (
     <TeaContext.Provider
