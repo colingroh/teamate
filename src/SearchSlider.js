@@ -24,7 +24,7 @@ export default function SearchSlider(props) {
         {props.fieldName}{" "}
       </Typography>
       <Slider
-        color="secondary"
+        color="primary"
         defaultValue={5}
         aria-labelledby={labelId}
         step={1}

@@ -8,7 +8,7 @@ const USERS = [
     major: "Theatre",
     int1: "Reading",
     int2: "Microbiology",
-    pic: "",
+    id: 1,
   },
   {
     first: "Eric",
@@ -16,7 +16,7 @@ const USERS = [
     major: "Computer Science",
     int1: "Reading",
     int2: "Privacy",
-    pic: "",
+    id: 2,
   },
   {
     first: "Aliyah",
@@ -24,7 +24,7 @@ const USERS = [
     major: "Geography",
     int1: "Maps",
     int2: "Music",
-    pic: "",
+    id: 3,
   },
   {
     first: "Roy",
@@ -32,7 +32,7 @@ const USERS = [
     major: "Theatre",
     int1: "Dogs",
     int2: "Soccer",
-    pic: "",
+    id: 4,
   },
   {
     first: "Rico",
@@ -40,7 +40,7 @@ const USERS = [
     major: "History",
     int1: "Leadership",
     int2: "Frogs",
-    pic: "",
+    id: 5,
   },
   {
     first: "Marjorie",
@@ -48,7 +48,7 @@ const USERS = [
     major: "Theatre",
     int1: "Reading",
     int2: "Microbiology",
-    pic: "",
+    id: 6,
   },
   {
     first: "Eric",
@@ -56,7 +56,7 @@ const USERS = [
     major: "Computer Science",
     int1: "Reading",
     int2: "Privacy",
-    pic: "",
+    id: 7,
   },
 ];
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -8,11 +8,19 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import johnny from "./profile_pic.png";
+import {TeaContext} from "./TeaContext"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: "100%",
     marginBottom: 10,
+    raised: false,
+  },
+  selected:{
+    minWidth: "100%",
+    marginBottom: 10,
+    background: theme.palette.secondary.main,
+    raised: true,
   },
   name: {
     textAlign: "left",
@@ -32,7 +40,12 @@ const useStyles = makeStyles((theme) => ({
 // First Name, Last Name, Major, Interest 1, Interest 2
 export default function SimpleCard(prop) {
   const classes = useStyles();
+  const context = useContext(TeaContext);
 
+  const handleChange = () => {
+      console.log("pretty colors!")
+      context.setSelectedCardID(prop.user.id);
+  };
   // const [isHighlighted, updateHighlighted] = useGlobalState("isHighlighted");
 
   // let handleClick = (event) => {
@@ -42,9 +55,18 @@ export default function SimpleCard(prop) {
   // function changeHighlight() {
   //     return !isHighlighted
   // }
+  var coloring;
+  if(context.selectedCardID === prop.user.id){
+    coloring = classes.selected
+    console.log("select",{coloring})
+  }
+  else{
+    coloring = classes.root
+    console.log("root",{coloring})
+  }
 
   return (
-    <Card className={classes.root} elevation={8}>
+    <Card className={coloring} elevation={8}>
       <CardContent>
         <Grid container spacing={2}>
           <Grid item md={12}>
@@ -88,7 +110,7 @@ export default function SimpleCard(prop) {
       </CardContent>
 
       <CardActions className={classes.button}>
-        <Button>Select</Button>
+        <Button onClick= {() => handleChange()}>Select</Button>
       </CardActions>
     </Card>
   );

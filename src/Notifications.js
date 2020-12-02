@@ -20,7 +20,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >
@@ -36,7 +36,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >
@@ -52,7 +52,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >
@@ -68,7 +68,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >
@@ -84,7 +84,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >
@@ -100,7 +100,7 @@ export default function Notifications() {
           <Typography
             className={classes.root}
             display="inline"
-            color="secondary"
+            color="textPrimary"
             ml={3}
             h5
           >

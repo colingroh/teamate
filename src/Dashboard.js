@@ -121,7 +121,7 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={5}>
-          {context.searchType == 'TeaParty' ?
+          {context.submittedSearch == 'TeaParty' ?
             <Paper className={classes.matches}>
               <SuggestedTeaParties />
             </Paper>

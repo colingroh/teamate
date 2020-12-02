@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -12,6 +12,7 @@ import zuko from "./Zuko.png";
 import danny from "./danny.jpg";
 import dora from "./dora.jpg";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
+import {TeaContext} from "./TeaContext"
 
 const GROUP_DATA = [
   {
@@ -20,7 +21,7 @@ const GROUP_DATA = [
     major: "Theatre",
     int1: "Reading",
     int2: "Microbiology",
-    Picture: "",
+    id: "",
   },
   {
     first: "Mark",
@@ -28,7 +29,7 @@ const GROUP_DATA = [
     major: "Computer Science",
     int1: "Reading",
     int2: "Privacy",
-    Picture: "",
+    id: "",
   },
   {
     first: "John",
@@ -36,7 +37,7 @@ const GROUP_DATA = [
     major: "Geography",
     int1: "Maps",
     int2: "Music",
-    Picture: "",
+    id: "",
   },
   {
     first: "Daniel",
@@ -44,7 +45,7 @@ const GROUP_DATA = [
     major: "Theatre",
     int1: "Dogs",
     int2: "Soccer",
-    Picture: "",
+    id: "",
   },
 ];
 
@@ -53,7 +54,10 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
     marginBottom: 10,
   },
-  name: {},
+  selected: {minWidth: "100%",
+  marginBottom: 10,
+  background: theme.palette.secondary.main,
+},
   major: {},
   pos: {},
   button: {
@@ -66,20 +70,42 @@ const useStyles = makeStyles((theme) => ({
 // first, last, major, int1, int2
 export default function SimpleCard(prop) {
   const classes = useStyles();
+  const context = useContext(TeaContext);
+
+  const handleChange = () => {
+      console.log("pretty colors!")
+      context.setSelectedCardID(prop.user.id);
+  }
 
   // let handleClick = (event) => {
   //     {console.log('beepboop')}
   // }
 
+  var coloring;
+  if(context.selectedCardID === prop.user.id){
+    coloring = classes.selected
+    console.log("select",{coloring})
+  }
+  else{
+    coloring = classes.root
+    console.log("root",{coloring})
+  }
+
   return (
-    <Card className={classes.root} elevation={8}>
+    <Card className={coloring} elevation={8}>
       <CardContent>
-        <AvatarGroup max={4}>
+        <Grid container>
+          <Grid item xs = {5}>
+         <AvatarGroup max={4}>
           <Avatar className={classes.avatar} alt="Dora" src={dora} />
           <Avatar className={classes.avatar} alt="Zuko" src={zuko} />
           <Avatar className={classes.avatar} alt="Johnny" src={johnny} />
           <Avatar className={classes.avatar} alt="Danny Phantom" src={danny} />
-        </AvatarGroup>
+        </AvatarGroup> 
+        </Grid>
+        <Grid item xs = {7}><h3 color = 'textPrimary'> {prop.user.title}</h3></Grid>
+          
+        </Grid>
         <Grid container>
           {GROUP_DATA.map((user) => (
             <>
@@ -112,7 +138,7 @@ export default function SimpleCard(prop) {
         </Grid>
       </CardContent>
       <CardActions className={classes.button}>
-        <Button>Select</Button>
+        <Button onClick={() => handleChange()}>Select</Button>
       </CardActions>
     </Card>
   );
