@@ -12,7 +12,7 @@ import HiddenMatch from "./HiddenMatch";
 import SuggestedTeaParties from "./SuggestedTeaParties";
 import HighlightedParty from "./HighlightedParty";
 import { TeaContext } from "./TeaContext";
-
+import HiddenSuggestions from "./HiddenSuggestions"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -96,6 +96,13 @@ export default function Dashboard(props) {
   }
 
   function FormRow2() {
+    var highlight
+    {if(context.selectedCardID){
+      highlight = <HighlightedMatch />;
+   }
+   else{
+     highlight = <HiddenMatch/>;
+   }}
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
@@ -106,7 +113,8 @@ export default function Dashboard(props) {
         </Grid>
         <Grid item xs={12}>
           {/* <Paper className={classes.featured}> */}
-          <HighlightedMatch />
+          {highlight}
+         
           {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
           {/* </Paper> */}
         </Grid>
@@ -114,6 +122,24 @@ export default function Dashboard(props) {
     );
   }
 
+  var suggest = (
+    <Paper className={classes.matches} flexGrow = {1}>
+      <HiddenSuggestions />
+    </Paper>
+  );
+  if (context.submittedSearch === "TeaParty") {
+    suggest = (
+      <Paper className={classes.matches}>
+        <SuggestedTeaParties />
+      </Paper>
+    );
+  } else if (context.submittedSearch === "TeaMate") {
+    suggest = (
+      <Paper className={classes.matches}>
+        <SuggestedMatches />
+      </Paper>
+    );
+  }
   return (
     <div className={classes.root}>
       <Grid container spacing={2}>
@@ -121,16 +147,7 @@ export default function Dashboard(props) {
           <FormRow1 />
         </Grid>
         <Grid item xs={5}>
-          {context.submittedSearch == 'TeaParty' ?
-            <Paper className={classes.matches}>
-              <SuggestedTeaParties />
-            </Paper>
-            :
-            <Paper className={classes.matches}>
-              <SuggestedMatches />
-            </Paper>
-          }
-
+          {suggest}
         </Grid>
         <Grid item xs={4}>
           <FormRow2 />
