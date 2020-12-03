@@ -1,25 +1,30 @@
 {
   "files": {
-    "main.css": "/teamate/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/teamate/static/js/main.66627ca5.chunk.js",
-    "main.js.map": "/teamate/static/js/main.66627ca5.chunk.js.map",
+    "main.css": "/teamate/static/css/main.236fa8a3.chunk.css",
+    "main.js": "/teamate/static/js/main.939a99ee.chunk.js",
+    "main.js.map": "/teamate/static/js/main.939a99ee.chunk.js.map",
     "runtime-main.js": "/teamate/static/js/runtime-main.b1b2a35c.js",
     "runtime-main.js.map": "/teamate/static/js/runtime-main.b1b2a35c.js.map",
-    "static/js/2.f6f19871.chunk.js": "/teamate/static/js/2.f6f19871.chunk.js",
-    "static/js/2.f6f19871.chunk.js.map": "/teamate/static/js/2.f6f19871.chunk.js.map",
+    "static/css/2.e512881f.chunk.css": "/teamate/static/css/2.e512881f.chunk.css",
+    "static/js/2.65514d8b.chunk.js": "/teamate/static/js/2.65514d8b.chunk.js",
+    "static/js/2.65514d8b.chunk.js.map": "/teamate/static/js/2.65514d8b.chunk.js.map",
     "index.html": "/teamate/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/teamate/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.f6f19871.chunk.js.LICENSE.txt": "/teamate/static/js/2.f6f19871.chunk.js.LICENSE.txt",
+    "static/css/2.e512881f.chunk.css.map": "/teamate/static/css/2.e512881f.chunk.css.map",
+    "static/css/main.236fa8a3.chunk.css.map": "/teamate/static/css/main.236fa8a3.chunk.css.map",
+    "static/js/2.65514d8b.chunk.js.LICENSE.txt": "/teamate/static/js/2.65514d8b.chunk.js.LICENSE.txt",
+    "static/media/UploadIcon.svg": "/teamate/static/media/UploadIcon.469126df.svg",
     "static/media/Zuko.7a5fbf29.png": "/teamate/static/media/Zuko.7a5fbf29.png",
     "static/media/danny.74f5cc58.jpg": "/teamate/static/media/danny.74f5cc58.jpg",
     "static/media/dora.fc40f56f.jpg": "/teamate/static/media/dora.fc40f56f.jpg",
     "static/media/doug.16b8b891.jpeg": "/teamate/static/media/doug.16b8b891.jpeg",
-    "static/media/profile_pic.1a9656fb.png": "/teamate/static/media/profile_pic.1a9656fb.png"
+    "static/media/logo.af5d0b5c.png": "/teamate/static/media/logo.af5d0b5c.png",
+    "static/media/profile_pic.36290b0e.png": "/teamate/static/media/profile_pic.36290b0e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b1b2a35c.js",
-    "static/js/2.f6f19871.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.66627ca5.chunk.js"
+    "static/css/2.e512881f.chunk.css",
+    "static/js/2.65514d8b.chunk.js",
+    "static/css/main.236fa8a3.chunk.css",
+    "static/js/main.939a99ee.chunk.js"
   ]
 }
