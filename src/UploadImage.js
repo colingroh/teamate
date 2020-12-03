@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ImageUploader from "react-images-upload";
-import { Button } from "@material-ui/core";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,10 +20,13 @@ export default class UploadImage extends React.Component {
   }
 
   onDrop(picture) {
+  
     this.setState({
       pictures: this.state.pictures.concat(picture),
+      
     });
   }
+
 
 
   
@@ -37,18 +39,26 @@ export default class UploadImage extends React.Component {
             <img src={mainLogo} alt="" height={123} width={219} />
           </h1>
         </div>
+        
         <h1>Last step! Choose your profile picture:</h1>
-        <ImageUploader
+
+        <ImageUploader style={{padding:0 }}
+        
           withPreview={true}
           withIcon={false}
           buttonText="Upload Image"
           withLabel={false}
           singleImage={true}
           onChange={this.onDrop}
+      
           imgExtension={[".jpg", ".gif", ".png", ".jpeg"]}
           maxFileSize={5242880}
         />
-        <HashRouter><Link to="/Dashboard">Go to Dashboard</Link></HashRouter>
+        <HashRouter><Link to="/Dashboard">All done? Go to Dashboard and start matching!</Link></HashRouter>
+        <br></br>
+        <HashRouter><Link to="/Signup">  Need to make changes? Head back to the registration form</Link></HashRouter>
+        <br></br>
+        <br></br>
       </div>
     );
   }

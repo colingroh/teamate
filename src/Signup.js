@@ -16,6 +16,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      
       classes: [
         "Advanced Writing",
         "Music Theory",
@@ -37,10 +38,22 @@ export default class App extends React.Component {
       fullname: "",
       email: "",
       password: "",
+      bio: "",
     };
+    this.style = {
+      chips: {
+        background: "#103D3A"
+      },
+      multiselectContainer: {
+        color: "#103D3A"
+      }
+    };
+   
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    
   }
+  
 
   handleSubmit(event) {
     event.preventDefault();
@@ -56,12 +69,6 @@ export default class App extends React.Component {
     });
   }
 
-  handleSelectChange(e) {
-    const { name, value } = e.target;
-    this.setState({
-      [name]: this.selectedClasses.push(value),
-    });
-  }
 
   render() {
     return (
@@ -82,7 +89,7 @@ export default class App extends React.Component {
                   <input
                     type="text"
                     name="fullname"
-                    //onChange={this.handleChange}
+                    onChange={this.handleChange}
                     class="form-control"
                     placeholder="Enter Full Name"
                   />
@@ -92,7 +99,7 @@ export default class App extends React.Component {
                   <input
                     type="text"
                     name="email"
-                    //onChange={this.handleChange}
+                    onChange={this.handleChange}
                     class="form-control"
                     placeholder="Enter email"
                   />
@@ -102,48 +109,79 @@ export default class App extends React.Component {
                   <input
                     type="password"
                     name="password"
-                    // onChange={this.handleChange}
+                    onChange={this.handleChange}
                     class="form-control"
                     placeholder="Enter password"
                     id="password"
                   />
                 </div>
+                <div class="form-group">
+                  <label for="major">Major:</label>
+                  <input
+                    type="text"
+                    name="major"
+                    onChange={this.handleChange}
+                    class="form-control"
+                    placeholder="Enter your major"
+                    id="major"
+                  />
+                </div>
+                <div class="form-group" >
+                  <label for="minor">Minor:</label>
+                  <input
+                    type="text"
+                    name="minor"
+                    onChange={this.handleChange}
+                    class="form-control"
+                    placeholder="Enter your minor"
+                    id="minor"
+                    
+                  />
+                </div>
+                
                 What classes are you in?
                 <Multiselect
                   name="selectedClasses"
                   options={this.state.classes}
                   isObject={false}
                   selectionLimit="4"
-                  onChange={this.handleSelectChange}
+                  onChange={this.handleChange}
+                  style={this.style}
                 />
                 Choose up to 5 interests:
                 <Multiselect
                   options={this.state.interests}
                   isObject={false}
                   selectionLimit="5"
-                  onChange={this.handleSelectChange}
+                  style={this.style}
+                  onChange={this.handleChange}
                 />
                 Create a short bio <small> (140 characters or less) </small>
-                <textarea
+                <textarea 
+                style={{marginBottom: 20}}
                   name="bio"
-                  //onChange={this.handleChange}
+                  onChange={this.handleChange}
                   class="form-control"
                   placeholder="Tell us about yourself"
                   maxLength="140"
                 />
-                <input
+               
+                <input  style={{backgroundColor: "#103D3A", borderColor: "#103D3A"}}
                   type="submit"
                   value="Save"
                   class="btn btn-success"
-                />
+                />&nbsp;&nbsp;
+                 <HashRouter><Link to="/upload" className="btn btn-primary" style={{backgroundColor: "#103D3A", borderColor: "#103D3A"}} onClick={console.log("Upload time!")}>Upload Profile Picture</Link></HashRouter>
               </form>
-              <HashRouter><Link to="/upload" className="btn btn-primary" onClick={console.log("Upload time!")}>Upload Profile Picture</Link></HashRouter>
+             
             </div>
           </div>
         </div>
       </div>
     );
   }
+  
 }
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

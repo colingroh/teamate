@@ -1,5 +1,6 @@
 .App {
     font-family: sans-serif;
+
   }
   .header {
     padding: 20px;
@@ -7,7 +8,7 @@
     position: relative;
     color: #fff;
     text-align: center;
-    background-color: #103D3A;
+    background-color: #9AACA0;
     
   }
   .sourceLink {
@@ -28,6 +29,8 @@
   #multiselectContainerReact {
     margin-bottom: 20px;
     float: none;
+    background-color:white
+    
   }
   code {
     padding: 10px;
@@ -52,11 +55,18 @@
   .otheroptions {
     font-size: 14px;
   }
+  label {
+   
+    display: block;
+
+    float: left;
+    }
+
   
   /* Overriding element hover */
   .optionContainer li:hover,
   .optionContainer .highlight {
-    background: red;
+    background: #103D3A;
     color: #fff;
   }
   /* Ends overriding */
