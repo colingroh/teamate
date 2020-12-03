@@ -133,11 +133,11 @@ export default class App extends React.Component {
                 />
                 <input
                   type="submit"
-                  value="Save and Continue"
+                  value="Save"
                   class="btn btn-success"
                 />
               </form>
-              <HashRouter><Link to="/upload" className="btn btn-primary" onClick={console.log("Upload time!")}>Sign up (Click Refresh!)</Link></HashRouter>
+              <HashRouter><Link to="/upload" className="btn btn-primary" onClick={console.log("Upload time!")}>Upload Profile Picture</Link></HashRouter>
             </div>
           </div>
         </div>
