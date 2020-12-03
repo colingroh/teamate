@@ -15,7 +15,7 @@ export default function Preferences() {
         {INTERESTS.map((fieldName) => (
           <SearchSlider fieldName={fieldName} />
         ))}
-        <SearchButton/>
+        <SearchButton />
       </Box>
     </div>
   );

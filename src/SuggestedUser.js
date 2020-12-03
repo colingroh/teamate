@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import johnny from "./profile_pic.png";
-import {TeaContext} from "./TeaContext"
+import { TeaContext } from "./TeaContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
     raised: false,
   },
-  selected:{
+  selected: {
     minWidth: "100%",
     marginBottom: 10,
     background: theme.palette.secondary.main,
@@ -43,8 +43,8 @@ export default function SimpleCard(prop) {
   const context = useContext(TeaContext);
 
   const handleChange = () => {
-      console.log("pretty colors!")
-      context.setSelectedCardID(prop.user.id);
+    console.log("pretty colors!");
+    context.setSelectedCardID(prop.user.id);
   };
   // const [isHighlighted, updateHighlighted] = useGlobalState("isHighlighted");
 
@@ -56,13 +56,12 @@ export default function SimpleCard(prop) {
   //     return !isHighlighted
   // }
   var coloring;
-  if(context.selectedCardID === prop.user.id){
-    coloring = classes.selected
-    console.log("select",{coloring})
-  }
-  else{
-    coloring = classes.root
-    console.log("root",{coloring})
+  if (context.selectedCardID === prop.user.id) {
+    coloring = classes.selected;
+    console.log("select", { coloring });
+  } else {
+    coloring = classes.root;
+    console.log("root", { coloring });
   }
 
   return (
@@ -110,7 +109,7 @@ export default function SimpleCard(prop) {
       </CardContent>
 
       <CardActions className={classes.button}>
-        <Button onClick= {() => handleChange()}>Select</Button>
+        <Button onClick={() => handleChange()}>Select</Button>
       </CardActions>
     </Card>
   );

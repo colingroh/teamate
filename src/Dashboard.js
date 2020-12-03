@@ -12,7 +12,7 @@ import HiddenMatch from "./HiddenMatch";
 import SuggestedTeaParties from "./SuggestedTeaParties";
 import HighlightedParty from "./HighlightedParty";
 import { TeaContext } from "./TeaContext";
-import HiddenSuggestions from "./HiddenSuggestions"
+import HiddenSuggestions from "./HiddenSuggestions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -96,18 +96,16 @@ export default function Dashboard(props) {
   }
 
   function FormRow2() {
-    var highlight
-    if(context.selectedCardID){
-        if(context.submittedSearch === "TeaMate"){
-      highlight = <HighlightedMatch />;
-        }
-        else{
-          highlight = <HighlightedParty />
-        }
-   }
-   else{
-     highlight = <HiddenMatch/>;
-   }
+    var highlight;
+    if (context.selectedCardID) {
+      if (context.submittedSearch === "TeaMate") {
+        highlight = <HighlightedMatch />;
+      } else {
+        highlight = <HighlightedParty />;
+      }
+    } else {
+      highlight = <HiddenMatch />;
+    }
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
@@ -119,7 +117,7 @@ export default function Dashboard(props) {
         <Grid item xs={12}>
           {/* <Paper className={classes.featured}> */}
           {highlight}
-         
+
           {/* {store.isHighlighted ? <HighlightedMatch /> : <HiddenMatch />} */}
           {/* </Paper> */}
         </Grid>
@@ -128,7 +126,7 @@ export default function Dashboard(props) {
   }
 
   var suggest = (
-    <Paper className={classes.matches} flexGrow = {1}>
+    <Paper className={classes.matches} flexGrow={1}>
       <HiddenSuggestions />
     </Paper>
   );

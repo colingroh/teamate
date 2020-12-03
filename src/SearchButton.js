@@ -7,7 +7,7 @@ export default function SearchButton(props) {
 
   const handleChange = () => {
     if (context.searchType) {
-      context.setSelectedCardID(null)
+      context.setSelectedCardID(null);
       context.setSubmittedSearch(context.searchType);
     } else {
       alert("Please Select a Search Type");
