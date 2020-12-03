@@ -97,12 +97,17 @@ export default function Dashboard(props) {
 
   function FormRow2() {
     var highlight
-    {if(context.selectedCardID){
+    if(context.selectedCardID){
+        if(context.submittedSearch === "TeaMate"){
       highlight = <HighlightedMatch />;
+        }
+        else{
+          highlight = <HighlightedParty />
+        }
    }
    else{
      highlight = <HiddenMatch/>;
-   }}
+   }
     return (
       <Grid container spacing={3}>
         <Grid item xs={12}>
